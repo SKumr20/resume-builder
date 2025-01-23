@@ -1,20 +1,10 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Form from './components/Form';
-import Preview from './components/Preview';
-import Hero from './components/Hero';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <div>
-        <Form />
-        <Preview />
-        
-      </div>
-
+      <HomePage />
     </>
     
   )
