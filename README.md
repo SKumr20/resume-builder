@@ -9,6 +9,7 @@ Resume Maker project for React section of [The Odin Project](https://www.theodin
 - **TailwindCSS**
 - **Vite**
 - **ShadCN**
+- **Aceternity UI**
 
 
 
