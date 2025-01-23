@@ -2,6 +2,10 @@
 
 Resume Maker project for React section of [The Odin Project](https://www.theodinproject.com/)
 
+## Live Demo
+
+[Netlify](https://satyamkr02-resume-builder.netlify.app/)
+
 ## Tech Stack
 
 - **React**
