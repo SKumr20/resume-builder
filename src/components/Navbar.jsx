@@ -2,6 +2,7 @@ import React from 'react';
 import { FileUser, Github } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage } from './ui/avatar';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -14,14 +15,14 @@ const Navbar = () => {
         </div>
       <div>
         <Button variant='link' size='sm'>
-          <a href='/'>
+          <NavLink to='/' className={ ({ isActive }) => isActive ? 'underline' : ''} > 
             Home
-          </a>
+          </NavLink>
         </Button>
         <Button  variant='link' size='sm'>
-          <a href='/createResume'>
+          <NavLink to='/createResume' className={ ({ isActive }) => isActive ? 'underline' : ''}>
             Create
-          </a>
+          </NavLink>
         </Button>
       </div>
       </div>
