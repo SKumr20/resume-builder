@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export default function SignupFormDemo({ setFirstname, setLastname, setEmail }) {
+export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -32,6 +32,10 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail }) 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="cia@confidential.com" type="email" onChange={(e) => setEmail(e.target.value)}/>
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="email">Phone</Label>
+          <Input id="phone" placeholder="+123-987654321" type="tel" onChange={(e) => setPhone(e.target.value)} />
         </LabelInputContainer>
         <div
           className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent my-8 h-[1px] w-full" />
