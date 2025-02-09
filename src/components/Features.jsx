@@ -4,13 +4,13 @@ import { useId } from "react";
 const Features = () => {
   return (
     <>
-    <div className="flex py-10 items-center justify-center bg-background">
+    <div className="flex p-10 items-center justify-center bg-background">
     <h2 className="text-3xl text-foreground bg-background font-semibold tracking-tight first:mt-0">
       Features
     </h2>
     </div>
     <div className="bg-background">
-      <div className="grid py-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
+      <div className="grid p-20 py-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2 max-w-7xl mx-auto">
         {grid.map((feature, index) => (
           <div
             key={index}

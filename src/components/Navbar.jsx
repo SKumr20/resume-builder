@@ -14,10 +14,14 @@ const Navbar = () => {
         </div>
       <div>
         <Button variant='link' size='sm'>
-          Home
+          <a href='/'>
+            Home
+          </a>
         </Button>
-        <Button variant='link' size='sm'>
-          Create
+        <Button  variant='link' size='sm'>
+          <a href='/createResume'>
+            Create
+          </a>
         </Button>
       </div>
       </div>
