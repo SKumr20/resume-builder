@@ -1,44 +1,38 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export default function SignupFormDemo() {
+export default function SignupFormDemo({ setFirstname, setLastname, setEmail }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted");
   };
+
+
   return (
     (<div
       className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black">
       <h2 className="font-bold text-xl text-neutral-200">
-        Welcome to Aceternity
+        Enter Your Data
       </h2>
       <form className="my-8" onSubmit={handleSubmit}>
         <div
           className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname" placeholder="Lewis" type="text" onChange={(e) => setFirstname(e.target.value)}/>
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input id="lastname" placeholder="Hamilton" type="text" onChange={(e) => setLastname(e.target.value)}/>
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Input id="email" placeholder="cia@confidential.com" type="email" onChange={(e) => setEmail(e.target.value)}/>
         </LabelInputContainer>
-
-        <button
-          className="bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900 block bg-zinc-800 w-full text-white rounded-xl h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit">
-          Submit
-          <BottomGradient />
-        </button>
-
         <div
           className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent my-8 h-[1px] w-full" />
       </form>
