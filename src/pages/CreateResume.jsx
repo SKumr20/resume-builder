@@ -7,12 +7,13 @@ const CreateResume = () => {
   const [lastname, setLastname] = useState("Hamilton");
   const [email, setEmail] = useState("cia@confidential.com");
   const [phone, setPhone] = useState('+123-987654321');
+  const [linkedin, setLinkedin] = useState('linkedin.com/satyamkumr20/');
 
   return (
     <>
       <div className='grid grid-cols-2 p-4 bg-background max-h-full'>
-        <SignupFormDemo setFirstname={setFirstname} setLastname={setLastname} setEmail={setEmail} setPhone={setPhone} />
-        <ResumePreview firstname={firstname} lastname={lastname} email={email} phone={phone} />
+        <SignupFormDemo setFirstname={setFirstname} setLastname={setLastname} setEmail={setEmail} setPhone={setPhone} setLinkedin={setLinkedin} />
+        <ResumePreview firstname={firstname} lastname={lastname} email={email} phone={phone} linkedin={linkedin} />
       </div>
     </>
   )
