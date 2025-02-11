@@ -2,6 +2,9 @@
 
 Resume Maker project for React section of [The Odin Project](https://www.theodinproject.com/)
 
+![Home Page](<src/assets/images//homepage.png>)
+![Resume](<src/assets/images//resume.png>)
+
 ## Live Demo
 
 [Netlify](https://satyamkr02-resume-builder.netlify.app/)
