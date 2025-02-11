@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { DatePickerWithRange } from "./ui/DatePickerWithRange.tsx";
 
-export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location}) {
+
+export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,6 +59,12 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
           <Input id="education1location" placeholder="NYC, USA" type="text" onChange={(e) => setEducation1Location(e.target.value)} />
         </LabelInputContainer>
 
+        {/* Education1 datepicker */}
+        <LabelInputContainer className='mb-4'>
+          <Label>Education 1 Duration</Label>   
+          <DatePickerWithRange className=' text-muted-foreground' setEducation1Date={setEducation1Date} target="education1" />
+        </LabelInputContainer>
+
         <LabelInputContainer className="mb-4">
           <Label htmlFor="education1">Education 2</Label>
           <Input id="education2" placeholder="School/College" type="text" onChange={(e) => setEducation2(e.target.value)} />
@@ -68,6 +76,11 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
         <LabelInputContainer className="mb-4">
           <Label htmlFor="education2location">Second Education Location</Label>
           <Input id="education2location" placeholder="Ohio, USA" type="text" onChange={(e) => setEducation2Location(e.target.value)} />
+        </LabelInputContainer>
+
+        <LabelInputContainer className='mb-4'>
+          <Label>Education 2 Duration</Label>   
+          <DatePickerWithRange className=' text-muted-foreground  ' setEducation2Date={setEducation2Date} target="education2" />
         </LabelInputContainer>
 
 
