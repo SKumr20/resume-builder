@@ -29,78 +29,108 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
       </h2>
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-
-
-        {/* Header section */}
-        <Accordion type="single" collapsible className="w-full text-muted-foreground hover:text-foreground">
-          <AccordionItem value="item-1" className="w-full">
-            <AccordionTrigger className="w-full">Name</AccordionTrigger>
-              <AccordionContent className="w-full">
-                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 w-full">
-                  <LabelInputContainer className="w-full">
-                    <Label htmlFor="firstname">First name</Label>
-                    <Input id="firstname" placeholder="Lewis" type="text" onChange={(e) => setFirstname(e.target.value)} />
-                  </LabelInputContainer>
-                  <LabelInputContainer className="w-full">
-                    <Label htmlFor="lastname">Last name</Label>
-                    <Input id="lastname" placeholder="Hamilton" type="text" onChange={(e) => setLastname(e.target.value)} />
-                  </LabelInputContainer>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-        </Accordion>
-
+          {/* Header section */}
+          <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground">
+            <AccordionItem value="item-1" className="w-full">
+              <AccordionTrigger className="w-full">Name</AccordionTrigger>
+                <AccordionContent className="w-full">
+                  <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 w-full">
+                    <LabelInputContainer className="w-full">
+                      <Label htmlFor="firstname">First name</Label>
+                      <Input id="firstname" placeholder="Lewis" type="text" onChange={(e) => setFirstname(e.target.value)} />
+                    </LabelInputContainer>
+                    <LabelInputContainer className="w-full">
+                      <Label htmlFor="lastname">Last name</Label>
+                      <Input id="lastname" placeholder="Hamilton" type="text" onChange={(e) => setLastname(e.target.value)} />
+                    </LabelInputContainer>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
         </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="cia@confidential.com" type="email" onChange={(e) => setEmail(e.target.value)}/>
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="phone">Phone</Label>
-          <Input id="phone" placeholder="+123-987654321" type="tel" onChange={(e) => setPhone(e.target.value)} />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="linkedin">LinkedIn Account</Label>
-          <Input id="linkedin" placeholder="linkedin.com/satyamkumr20/" type="url" onChange={(e) => setLinkedin(e.target.value)} />
-        </LabelInputContainer>
+
+
+        {/* Contact Section */}
+        <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground mb-4">
+            <AccordionItem value="item-2" className="w-full">
+              <AccordionTrigger className="w-full">Contact</AccordionTrigger>
+                <AccordionContent className="w-full">
+                  <div>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="email">Email Address</Label>
+                    <Input id="email" placeholder="cia@confidential.com" type="email" onChange={(e) => setEmail(e.target.value)}/>
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input id="phone" placeholder="+123-987654321" type="tel" onChange={(e) => setPhone(e.target.value)} />
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="linkedin">LinkedIn Account</Label>
+                    <Input id="linkedin" placeholder="linkedin.com/satyamkumr20/" type="url" onChange={(e) => setLinkedin(e.target.value)} />
+                  </LabelInputContainer>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
+
 
         {/* Education section */}
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="education1">Education 1</Label>
-          <Input id="education1" placeholder="School/College" type="text" onChange={(e) => setEducation1(e.target.value)} />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="educationDegree1">Add First Degree/Course</Label>
-          <Input id="degree1" placeholder="Bachelor/Master" type="text" onChange={(e) => setEducationDegree1(e.target.value)} />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="education1location">First Education Location</Label>
-          <Input id="education1location" placeholder="NYC, USA" type="text" onChange={(e) => setEducation1Location(e.target.value)} />
-        </LabelInputContainer>
+          <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground mb-4">
+            <AccordionItem value="item-2" className="w-full">
+              <AccordionTrigger className="w-full">Education 1</AccordionTrigger>
+                <AccordionContent className="w-full">
+                  <div>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="education1">Education 1</Label>
+                    <Input id="education1" placeholder="School/College" type="text" onChange={(e) => setEducation1(e.target.value)} />
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="educationDegree1">Add First Degree/Course</Label>
+                    <Input id="degree1" placeholder="Bachelor/Master" type="text" onChange={(e) => setEducationDegree1(e.target.value)} />
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="education1location">First Education Location</Label>
+                    <Input id="education1location" placeholder="NYC, USA" type="text" onChange={(e) => setEducation1Location(e.target.value)} />
+                  </LabelInputContainer>
 
-        {/* Education1 datepicker */}
-        <LabelInputContainer className='mb-4'>
-          <Label>Education 1 Duration</Label>   
-          <DatePickerWithRange className=' text-muted-foreground' setEducation1Date={setEducation1Date} target="education1" />
-        </LabelInputContainer>
+                  {/* Education1 datepicker */}
+                  <LabelInputContainer className='mb-4'>
+                    <Label>Education 1 Duration</Label>   
+                    <DatePickerWithRange className=' text-muted-foreground' setEducation1Date={setEducation1Date} target="education1" />
+                  </LabelInputContainer>   
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
 
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="education1">Education 2</Label>
-          <Input id="education2" placeholder="School/College" type="text" onChange={(e) => setEducation2(e.target.value)} />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="educationDegree1">Add Second Degree/Course</Label>
-          <Input id="degree2" placeholder="Bachelor/Master" type="text" onChange={(e) => setEducationDegree2(e.target.value)} />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="education2location">Second Education Location</Label>
-          <Input id="education2location" placeholder="Ohio, USA" type="text" onChange={(e) => setEducation2Location(e.target.value)} />
-        </LabelInputContainer>
 
-        <LabelInputContainer className='mb-4'>
-          <Label>Education 2 Duration</Label>   
-          <DatePickerWithRange className=' text-muted-foreground  ' setEducation2Date={setEducation2Date} target="education2" />
-        </LabelInputContainer>
+
+          <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground mb-4">
+            <AccordionItem value="item-2" className="w-full">
+              <AccordionTrigger className="w-full">Education 2</AccordionTrigger>
+                <AccordionContent className="w-full">
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="education1">Education 2</Label>
+                  <Input id="education2" placeholder="School/College" type="text" onChange={(e) => setEducation2(e.target.value)} />
+                </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="educationDegree1">Add Second Degree/Course</Label>
+                  <Input id="degree2" placeholder="Bachelor/Master" type="text" onChange={(e) => setEducationDegree2(e.target.value)} />
+                </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="education2location">Second Education Location</Label>
+                  <Input id="education2location" placeholder="Ohio, USA" type="text" onChange={(e) => setEducation2Location(e.target.value)} />
+                </LabelInputContainer>
+
+                <LabelInputContainer className='mb-4'>
+                  <Label>Education 2 Duration</Label>   
+                  <DatePickerWithRange className=' text-muted-foreground  ' setEducation2Date={setEducation2Date} target="education2" />
+                </LabelInputContainer>
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
+
+
 
 
 
