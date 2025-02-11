@@ -4,6 +4,13 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { DatePickerWithRange } from "./ui/DatePickerWithRange.tsx";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 
 
 export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date}) {
@@ -21,16 +28,28 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
         Enter Your Data
       </h2>
       <form className="my-8" onSubmit={handleSubmit}>
-        <div
-          className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Lewis" type="text" onChange={(e) => setFirstname(e.target.value)}/>
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Hamilton" type="text" onChange={(e) => setLastname(e.target.value)}/>
-          </LabelInputContainer>
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+
+
+        {/* Header section */}
+        <Accordion type="single" collapsible className="w-full text-muted-foreground hover:text-foreground">
+          <AccordionItem value="item-1" className="w-full">
+            <AccordionTrigger className="w-full">Name</AccordionTrigger>
+              <AccordionContent className="w-full">
+                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 w-full">
+                  <LabelInputContainer className="w-full">
+                    <Label htmlFor="firstname">First name</Label>
+                    <Input id="firstname" placeholder="Lewis" type="text" onChange={(e) => setFirstname(e.target.value)} />
+                  </LabelInputContainer>
+                  <LabelInputContainer className="w-full">
+                    <Label htmlFor="lastname">Last name</Label>
+                    <Input id="lastname" placeholder="Hamilton" type="text" onChange={(e) => setLastname(e.target.value)} />
+                  </LabelInputContainer>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+        </Accordion>
+
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
