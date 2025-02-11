@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1}) {
+export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,6 +52,10 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
           <Label htmlFor="educationDegree1">Add First Degree/Course</Label>
           <Input id="degree1" placeholder="Bachelor/Master" type="text" onChange={(e) => setEducationDegree1(e.target.value)} />
         </LabelInputContainer>
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="education1location">First Education Location</Label>
+          <Input id="education1location" placeholder="NYC, USA" type="text" onChange={(e) => setEducation1Location(e.target.value)} />
+        </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="education1">Education 2</Label>
@@ -60,6 +64,10 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
         <LabelInputContainer className="mb-4">
           <Label htmlFor="educationDegree1">Add Second Degree/Course</Label>
           <Input id="degree2" placeholder="Bachelor/Master" type="text" onChange={(e) => setEducationDegree2(e.target.value)} />
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="education2location">Second Education Location</Label>
+          <Input id="education2location" placeholder="Ohio, USA" type="text" onChange={(e) => setEducation2Location(e.target.value)} />
         </LabelInputContainer>
 
 
@@ -73,6 +81,12 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
           <Label htmlFor="experiencePlace1">Work Location 1</Label>
           <Input id="experience1" placeholder="Location" type="text" onChange={(e) => setExperiencePlace1(e.target.value)} />
         </LabelInputContainer>
+
+
+        
+
+
+
 
 
         <div
