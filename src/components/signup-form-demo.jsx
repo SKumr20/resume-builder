@@ -13,7 +13,7 @@ import {
 
 
 
-export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date, setExperience1Location, setExperience1Date }) {
+export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date, setExperience1Location, setExperience1Date, setExperience2, setExperiencePlace2, setExperience2Location, setExperience2Date }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -155,6 +155,31 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
                 <LabelInputContainer className='mb-4'>
                   <Label>Work 1 Duration</Label>   
                   <DatePickerWithRange className=' text-muted-foreground' setExperience1Date={setExperience1Date} target="experience1Location" />
+                </LabelInputContainer>
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
+
+
+          <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground mb-4">
+            <AccordionItem value="item-2" className="w-full">
+              <AccordionTrigger className="w-full">Experience 2</AccordionTrigger>
+                <AccordionContent className="w-full">
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="experience1">Experience 2</Label>
+                  <Input id="experience2" placeholder="Work Designation" type="text" onChange={(e) => setExperience2(e.target.value)} />
+                </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="experiencePlace2">Work Organization 2</Label>
+                  <Input id="experiencePlace2" placeholder="Organization/Company" type="text" onChange={(e) => setExperiencePlace2(e.target.value)} />
+                </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="experience2Location">Work Location 2</Label>
+                  <Input id="experience2Location" placeholder="Location" type="text" onChange={(e) => setExperience2Location(e.target.value)} />
+                </LabelInputContainer>
+                <LabelInputContainer className='mb-4'>
+                  <Label>Work 2 Duration</Label>   
+                  <DatePickerWithRange className=' text-muted-foreground' setExperience2Date={setExperience2Date} target="experience2Location" />
                 </LabelInputContainer>
                 </AccordionContent>
               </AccordionItem>

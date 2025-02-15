@@ -15,8 +15,8 @@ import {
 } from "@/components/ui/popover"
 
 export function DatePickerWithRange({
-  className, setEducation1Date, setEducation2Date, setExperience1Date ,target
-}: React.HTMLAttributes<HTMLDivElement> & { setEducation1Date: (date: string) => void; setEducation2Date: (date: string) => void; setExperience1Date: (date: string) => void; }) {
+  className, setEducation1Date, setEducation2Date, setExperience1Date, setExperience2Date ,target
+}: React.HTMLAttributes<HTMLDivElement> & { setEducation1Date: (date: string) => void; setEducation2Date: (date: string) => void; setExperience1Date: (date: string) => void; setExperience2Date: (date: string) => void; }) {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(2025, 0, 20),
     to: addDays(new Date(2025, 1, 20), 20),
@@ -67,6 +67,9 @@ export function DatePickerWithRange({
                   setEducation2Date(formattedDate);
                 } else if (target === "experience1Location") {
                   setExperience1Date(formattedDate);
+                }
+                else if (target === "experience2Location") {
+                  setExperience2Date(formattedDate);
                 }
               }
             }}        
