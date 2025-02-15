@@ -1,5 +1,5 @@
 
-const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1, educationDegree1, education2, educationDegree2, experience1, experiencePlace1, education1Location, education2Location, education1Date, education2Date}) => {
+const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1, educationDegree1, education2, educationDegree2, experience1, experiencePlace1, education1Location, education2Location, education1Date, education2Date, experience1Location, experience1Date}) => {
 
   return (
     <>
@@ -48,9 +48,18 @@ const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1
             <h2 className="text-lg mx-12 mt-4">Experience</h2>
             <hr className="border-[0.5px] mx-12 border-black"/>
 
-            <h2 className="mx-16 mt-1 font-bold">{experience1}</h2>
-            <h2 className="mx-16 mt-1 font-light text-sm">{experiencePlace1}</h2>
-            
+            <div className="flex flex-row justify-between">
+              <div>
+                <h2 className="mx-16 mt-1 font-bold">{experience1}</h2>
+                <h2 className="mx-16 mt-1 font-light text-sm">{experiencePlace1}</h2>
+              </div>
+              <div className="text-right">
+                <h2 className="mx-16 font-light mt-1 ">{experience1Location}</h2>
+                <h2 className="mx-16 font-light text-sm">{experience1Date}</h2>
+              </div>
+
+            </div>
+
         </div>
     </>
   )
