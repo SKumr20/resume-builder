@@ -1,5 +1,5 @@
 
-const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1, educationDegree1, education2, educationDegree2, experience1, experiencePlace1, education1Location, education2Location, education1Date, education2Date, experience1Location, experience1Date, experience2, experiencePlace2, experience2Location, experience2Date}) => {
+const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1, educationDegree1, education2, educationDegree2, experience1, experiencePlace1, education1Location, education2Location, education1Date, education2Date, experience1Location, experience1Date, experience2, experiencePlace2, experience2Location, experience2Date, experience1Detail, experience1Detail2, experience2Detail, experience2Detail2}) => {
 
   return (
     <>
@@ -49,25 +49,33 @@ const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1
             <hr className="border-[0.5px] mx-12 border-black"/>
 
             <div className="flex flex-row justify-between">
-              <div>
+              <div className="w-1/2">
                 <h2 className="mx-16 mt-1 font-bold">{experience1}</h2>
                 <h2 className="mx-16 mt-1 font-light text-sm">{experiencePlace1}</h2>
+                <ul className="mx-24 mt-1 font-light list-disc text-nowrap">
+                  <li> {experience1Detail} </li>
+                  <li> {experience1Detail2} </li>
+                </ul>
               </div>
-              <div className="text-right">
-                <h2 className="mx-16 font-light mt-1 ">{experience1Location}</h2>
-                <h2 className="mx-16 font-light text-sm">{experience1Date}</h2>
+              <div className="w-1/2 text-right">
+                <h2 className="mx-16 font-light mt-1">{experience1Location}</h2>
+                <h2 className="mx-16 font-light mt-1 text-sm">{experience1Date}</h2>
               </div>
             </div>
 
 
             <div className="flex flex-row justify-between">
-              <div>
+              <div className="w-1/2">
                 <h2 className="mx-16 mt-1 font-bold">{experience2}</h2>
                 <h2 className="mx-16 mt-1 font-light text-sm">{experiencePlace2}</h2>
+                <ul className="mx-24 mt-1 font-light list-disc text-nowrap">
+                  <li> {experience2Detail} </li>
+                  <li> {experience2Detail2} </li>
+                </ul>
               </div>
-              <div className="text-right">
+              <div className="w-1/2 text-right">
                 <h2 className="mx-16 font-light mt-1 ">{experience2Location}</h2>
-                <h2 className="mx-16 font-light text-sm">{experience2Date}</h2>
+                <h2 className="mx-16 font-light mt-1 text-sm">{experience2Date}</h2>
               </div>
             </div>
 

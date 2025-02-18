@@ -13,7 +13,7 @@ import {
 
 
 
-export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date, setExperience1Location, setExperience1Date, setExperience2, setExperiencePlace2, setExperience2Location, setExperience2Date }) {
+export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date, setExperience1Location, setExperience1Date, setExperience2, setExperiencePlace2, setExperience2Location, setExperience2Date, setExperience1Detail, setExperience1Detail2, setExperience2Detail, setExperience2Detail2 }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -156,6 +156,14 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
                   <Label>Work 1 Duration</Label>   
                   <DatePickerWithRange className=' text-muted-foreground' setExperience1Date={setExperience1Date} target="experience1Location" />
                 </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="experience1Detail">Point 1</Label>
+                  <Input id="experience1Detail" placeholder="Worked on XYZ" type="text" onChange={(e) => setExperience1Detail(e.target.value)} />
+                </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="experience1Detail2">Point 2</Label>
+                  <Input id="experience1Detail2" placeholder="Implemented ABC tech stack on XYZ" type="text" onChange={(e) => setExperience1Detail2(e.target.value)} />
+                </LabelInputContainer>
                 </AccordionContent>
               </AccordionItem>
           </Accordion>
@@ -181,6 +189,14 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
                   <Label>Work 2 Duration</Label>   
                   <DatePickerWithRange className=' text-muted-foreground' setExperience2Date={setExperience2Date} target="experience2Location" />
                 </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="experience2Detail">Point 1</Label>
+                  <Input id="experience2Detail" placeholder="Worked on XYZ" type="text" onChange={(e) => setExperience2Detail(e.target.value)} />
+                </LabelInputContainer>
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="experience2Detail2">Point 2</Label>
+                  <Input id="experience2Detail2" placeholder="Implemented ABC tech stack on XYZ" type="text" onChange={(e) => setExperience2Detail2(e.target.value)} />
+                </LabelInputContainer>                
                 </AccordionContent>
               </AccordionItem>
           </Accordion>
