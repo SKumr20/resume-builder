@@ -15,8 +15,9 @@ Resume Maker project for React section of [The Odin Project](https://www.theodin
 - **JavaScript**
 - **TailwindCSS**
 - **Vite**
-- **ShadCN**
-- **Aceternity UI**[]
+- **ShadCn UI**
+- **Aceternity UI**
+- **React2pdf**
 
 
 
