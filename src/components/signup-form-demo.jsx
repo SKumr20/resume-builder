@@ -23,7 +23,8 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
   };
   const handleDownload = () => {
     const elementToPrint = document.getElementById('print');
-    html2pdf(elementToPrint);
+    const filename = "resume";
+    html2pdf().from(elementToPrint).set({ filename }).save();
   }
 
 
