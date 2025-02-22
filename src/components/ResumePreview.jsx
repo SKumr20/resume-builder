@@ -1,9 +1,11 @@
+import html2pdf from "html2pdf.js";
+
 
 const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1, educationDegree1, education2, educationDegree2, experience1, experiencePlace1, education1Location, education2Location, education1Date, education2Date, experience1Location, experience1Date, experience2, experiencePlace2, experience2Location, experience2Date, experience1Detail, experience1Detail2, experience2Detail, experience2Detail2}) => {
 
   return (
     <>
-        <div className='bg-white h-full flex flex-col border-t-[20px] rounded-xl'>
+        <div className='bg-white h-full flex flex-col border-t-[20px] rounded-xl' id="print">
             {/* Top section */}
             <h2 className="font-bold text-4xl text-center mt-4">{firstname} {lastname}</h2>
             <div className="flex flex-row items-center justify-center text-sm gap-2">

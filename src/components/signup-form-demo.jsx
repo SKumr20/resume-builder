@@ -10,6 +10,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "./ui/button.jsx";
+import html2pdf from "html2pdf.js";
 
 
 
@@ -19,14 +21,27 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
     e.preventDefault();
     console.log("Form submitted");
   };
+  const handleDownload = () => {
+    const elementToPrint = document.getElementById('print');
+    html2pdf(elementToPrint);
+  }
 
 
   return (
     (<div
       className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black">
-      <h2 className="font-bold text-xl text-neutral-200">
-        Enter Your Data
-      </h2>
+      <div className="flex align-center items-center justify-between">
+        <h2 className="font-bold text-xl text-neutral-200">
+          Enter Your Data
+        </h2>
+        <button className="p-[2px] relative" onClick={handleDownload} >
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl" />
+          <div className="px-4 py-2 text-sm bg-black rounded-2xl  relative group transition duration-200 text-white hover:bg-transparent">
+          Download
+          </div>
+        </button>
+      </div>
+
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           {/* Header section */}
