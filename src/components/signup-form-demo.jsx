@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "./ui/button.jsx";
 import html2pdf from "html2pdf.js";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
@@ -25,6 +26,9 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
     const elementToPrint = document.getElementById('print');
     const filename = "resume";
     html2pdf().from(elementToPrint).set({ filename }).save();
+  };
+  const notify = () => {
+    toast('Downloaded!');
   }
 
 
@@ -35,7 +39,7 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
         <h2 className="font-bold text-xl text-neutral-200">
           Enter Your Data
         </h2>
-        <button className="p-[2px] relative" onClick={handleDownload} >
+        <button className="p-[2px] relative" onClick={() => { handleDownload(); notify(); }} >
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl" />
           <div className="px-4 py-2 text-sm bg-black rounded-2xl  relative group transition duration-200 text-white hover:bg-transparent">
           Download
