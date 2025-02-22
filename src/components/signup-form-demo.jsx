@@ -16,7 +16,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 
-export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date, setExperience1Location, setExperience1Date, setExperience2, setExperiencePlace2, setExperience2Location, setExperience2Date, setExperience1Detail, setExperience1Detail2, setExperience2Detail, setExperience2Detail2 }) {
+export default function SignupFormDemo({ setFirstname, setLastname, setEmail, setPhone, setLinkedin, setEducation1, setEducationDegree1, setEducation2, setEducationDegree2, setExperience1, setExperiencePlace1, setEducation1Location, setEducation2Location, setEducation1Date, setEducation2Date, setExperience1Location, setExperience1Date, setExperience2, setExperiencePlace2, setExperience2Location, setExperience2Date, setExperience1Detail, setExperience1Detail2, setExperience2Detail, setExperience2Detail2, setSkillHead1, setSkills1, setSkillHead2, setSkills2, setSkillHead3, setSkills3 }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -223,7 +223,55 @@ export default function SignupFormDemo({ setFirstname, setLastname, setEmail, se
 
 
 
-        
+        {/* Skill Section */}
+
+        <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground mb-4">
+            <AccordionItem value="item-2" className="w-full">
+              <AccordionTrigger className="w-full">Skills 1</AccordionTrigger>
+                <AccordionContent className="w-full">
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="skillHead1">Skill Type 1</Label>
+                  <Input id="skillHead1" placeholder="Languages: " type="text" onChange={(e) => setSkillHead1(e.target.value)} />
+                </LabelInputContainer>  
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="skills1">Skills</Label>
+                  <Input id="skills1" placeholder="HTML, CSS, JavaScript " type="text" onChange={(e) => setSkills1(e.target.value)} />
+                </LabelInputContainer>              
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground mb-4">
+            <AccordionItem value="item-2" className="w-full">
+              <AccordionTrigger className="w-full">Skills 2</AccordionTrigger>
+                <AccordionContent className="w-full">
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="skillHead2">Skill Type 2</Label>
+                  <Input id="skillHead2" placeholder="Tools: " type="text" onChange={(e) => setSkillHead2(e.target.value)} />
+                </LabelInputContainer>  
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="skills2">Skills 2</Label>
+                  <Input id="skills2" placeholder="Git, Linux, MacOS, NeoVIM" type="text" onChange={(e) => setSkills2(e.target.value)} />
+                </LabelInputContainer>              
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible className="w-full text-primary hover:text-foreground mb-4">
+            <AccordionItem value="item-2" className="w-full">
+              <AccordionTrigger className="w-full">Skills 3</AccordionTrigger>
+                <AccordionContent className="w-full">
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="skillHead3">Skill Type 3</Label>
+                  <Input id="skillHead3" placeholder="Libraries And Frameworks " type="text" onChange={(e) => setSkillHead3(e.target.value)} />
+                </LabelInputContainer>  
+                <LabelInputContainer className="mb-4">
+                  <Label htmlFor="skills3">Skills 3</Label>
+                  <Input id="skills3" placeholder="Numpy, SciKitLearn, MatplotLib" type="text" onChange={(e) => setSkills3(e.target.value)} />
+                </LabelInputContainer>              
+                </AccordionContent>
+              </AccordionItem>
+          </Accordion>
+
+
 
 
 

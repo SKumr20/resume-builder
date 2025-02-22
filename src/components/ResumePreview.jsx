@@ -1,7 +1,7 @@
 import html2pdf from "html2pdf.js";
 
 
-const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1, educationDegree1, education2, educationDegree2, experience1, experiencePlace1, education1Location, education2Location, education1Date, education2Date, experience1Location, experience1Date, experience2, experiencePlace2, experience2Location, experience2Date, experience1Detail, experience1Detail2, experience2Detail, experience2Detail2}) => {
+const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1, educationDegree1, education2, educationDegree2, experience1, experiencePlace1, education1Location, education2Location, education1Date, education2Date, experience1Location, experience1Date, experience2, experiencePlace2, experience2Location, experience2Date, experience1Detail, experience1Detail2, experience2Detail, experience2Detail2, skillHead1, skills1, skillHead2, skills2, skillHead3, skills3 }) => {
 
   return (
     <>
@@ -80,6 +80,27 @@ const ResumePreview = ({ firstname, lastname, email, phone, linkedin, education1
                 <h2 className="mx-16 font-light mt-1 text-sm">{experience2Date}</h2>
               </div>
             </div>
+
+
+            {/* Skills Section */}
+            <h2 className="text-lg mx-12 mt-4">Skills</h2>
+            <hr className="border-[0.5px] mx-12 border-black"/>
+
+            <div className="flex items-center mt-1 gap-2">
+              <h2 className="font-bold ml-16">{skillHead1}: </h2>
+              <h2 className="font-light">{skills1}</h2>
+            </div>
+            <div className="flex items-center gap-2">
+              <h2 className="font-bold ml-16">{skillHead2}: </h2>
+              <h2 className="font-light">{skills2}</h2>
+            </div>
+            <div className="flex items-center gap-2">
+              <h2 className="font-bold ml-16">{skillHead3}: </h2>
+              <h2 className="font-light">{skills3}</h2>
+            </div>
+
+
+
 
         </div>
     </>
