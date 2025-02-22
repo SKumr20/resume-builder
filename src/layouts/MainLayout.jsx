@@ -7,7 +7,15 @@ const MainLayout = () => {
     <>
         <Navbar />
         <Outlet />
-        <Toaster />
+        <Toaster
+          toastOptions={{
+            className: 'text-sm',
+            style: {
+              backgroundColor: 'hsl(var(--foreground))',
+              color: 'hsl(var(--background))'
+            }
+          }}
+        />
     </>
   )
 }
