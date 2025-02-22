@@ -2,8 +2,8 @@
 
 Resume Maker project for React section of [The Odin Project](https://www.theodinproject.com/)
 
-![Home Page](<src/assets/images//homepage.png>)
-![Resume](<src/assets/images//resume.png>)
+![Home Page](<src/assets/images/homepage.png>)
+![Resume](<src/assets/images/New create page.png>)
 
 ## Live Demo
 
